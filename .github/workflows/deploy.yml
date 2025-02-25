@@ -6,9 +6,11 @@ jobs:
     steps:
       - name: Check Out
         uses: actions/checkout@v3
+      - name: Install Dependencies
+        run: npm install
       - name: Lint
-        run: npm lint
+        run: npm run lint
       - name: Test
-        run: npm test
+        run: npm run test
       - name: Deploy
-        run: npm build
+        run: npm run build
