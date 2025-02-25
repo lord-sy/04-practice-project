@@ -1,0 +1,8 @@
+name: Output
+on: [issues, workflow-dispatch]
+jobs:
+  runs-on: ubuntu-latest
+  output:
+    steps:
+      - name: Output
+        run: echo "${{ github }}"
